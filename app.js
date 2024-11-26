@@ -98,7 +98,7 @@ function errorsCatches (plants) {
       try {
         if (plants > 98) {
           throw new RangeError (`The ${plants} Plants You Entered is OUT OF RANGE.`);
-        } 
+        } console.log (`The ${plants} Planets is within the range.`);
         
       } catch (error) {
       console.error (error);
