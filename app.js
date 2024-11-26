@@ -143,4 +143,4 @@ console.log("-------------------------------------------------------------------
 
 // Part 3: Errors in Judgement.
 console.log('Part 3: Errors in Judgement');
-errorsCatches(50);
+errorsCatches(100);
