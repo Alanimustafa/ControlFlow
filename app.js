@@ -89,28 +89,55 @@ function requiredAreaforPlants (numberOfPlants, numberofWeeks) {
 }
 
 
+//Part 3: Errors in Judgement.
+console.log('Part 3: Errors in Judgement');
+
+function errorsCatches (plants) {
+
+      // Sincs the original area holds 98 Plants, any extra will cause an error of Out of Range.
+      try {
+        if (plants > 98) {
+          throw new RangeError (`The ${plants} Plants You Entered is OUT OF RANGE.`);
+        } 
+        
+      } catch (error) {
+      console.error (error);
+    }
+}
+
+
 
 console.log("------------------------------------------------------------------------------")
 console.log("------------------------------------------------------------------------------")
 
+//Part 1: Growing Pains
 console.log("Part 1: Growing Pains")
 
-// After One Week.
-growthPerWeek(1);
+      // After One Week.
+      growthPerWeek(1);
+      console.log("------------------------------------------------------------------------------")
+
+      // After Two Weeks.
+      growthPerWeek(2);
+      console.log("------------------------------------------------------------------------------")
+
+      // After Three Weeks.
+      growthPerWeek(3);
+
+
+console.log("------------------------------------------------------------------------------")
 console.log("------------------------------------------------------------------------------")
 
-// After Two Weeks.
-growthPerWeek(2);
-console.log("------------------------------------------------------------------------------")
 
-// After Three Weeks.
-growthPerWeek(3);
-console.log("------------------------------------------------------------------------------")
-console.log("------------------------------------------------------------------------------")
-
-
-
-console.log('Part 2: Thinking Bigger');
-
+//Part 2: Thinking Bigger
 // Running the function to calculate the requrired area for 100 plants.
+console.log('Part 2: Thinking Bigger');
 requiredAreaforPlants(100, 10);
+
+console.log("------------------------------------------------------------------------------")
+console.log("------------------------------------------------------------------------------")
+
+
+// Part 3: Errors in Judgement.
+console.log('Part 3: Errors in Judgement');
+errorsCatches(100);
