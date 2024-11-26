@@ -4,7 +4,7 @@
 
 // Part 1: Growing Pains.
 
-let radius = 5;
+const radius = 5;
 const pi = 3.1415;
 let area = 0;
 const eachPlantSpace = 0.8;
@@ -59,8 +59,41 @@ function growthPerWeek (numberOfWeeks) {
       }
 }
 
+//Part 2: Thinking Bigger 
+// To calculate the radius of this expanded garden to have 100 plants.
+
+// The required area for 100 Plants.
+
+function requiredAreaforPlants (numberOfPlants, numberofWeeks) {
+
+  
+
+  let plantsNumberAfterWeek = 0; 
+  let newRadius
+
+  // To calculate The plant growth.
+  plantsNumberAfterWeek = 2 * startingNoOfPlants;
+
+  //To calculate the Number Plants for the Given number of weeks
+  growthperNumberOfWeeks = plantsNumberAfterWeek * numberofWeeks ;
+  console.log(`The number of Plants after ${numberofWeeks} Weeks will be ${growthperNumberOfWeeks} Plants`);
+
+  // To Calculate the Reuired Area for a spcific Number of Plants
+  let requiredAreaforPlants = eachPlantSpace * growthperNumberOfWeeks ;
+  console.log(`The required area for ${growthperNumberOfWeeks} plants is ${requiredAreaforPlants.toFixed(2)} SEQ METER`);
+
+  //To Calculate the radius.
+  newRadius = Math.sqrt(requiredAreaforPlants / pi); 
+  console.log(`The radius after planting ${growthperNumberOfWeeks} plants will be ${newRadius.toFixed(2)} Meters`);
+
+}
+
+
+
 console.log("------------------------------------------------------------------------------")
 console.log("------------------------------------------------------------------------------")
+
+console.log("Part 1: Growing Pains")
 
 // After One Week.
 growthPerWeek(1);
@@ -73,4 +106,11 @@ console.log("-------------------------------------------------------------------
 // After Three Weeks.
 growthPerWeek(3);
 console.log("------------------------------------------------------------------------------")
+console.log("------------------------------------------------------------------------------")
 
+
+
+console.log('Part 2: Thinking Bigger');
+
+// Running the function to calculate the requrired area for 100 plants.
+requiredAreaforPlants(100, 10);
