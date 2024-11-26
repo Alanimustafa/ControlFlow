@@ -13,7 +13,7 @@ let noOfWeeks = 0;
 
 //The Current Available Area.
 area = pi * radius * radius ;
-console.log(`The Maximum Available Area is ${area.toFixed(2)} SEQ Meter`);
+console.log(`The Maximum Area is ${area.toFixed(2)} SEQ Meter`);
 
 //The Maximum Capacity of The Current Area.
 let currentCapacity = area / eachPlantSpace;
@@ -102,6 +102,9 @@ function errorsCatches (plants) {
         
       } catch (error) {
       console.error (error);
+    } finally {
+      console.log(`The Maximum Area is ${area.toFixed(2)} SEQ Meter`);
+      console.log(`The maximum capacity of the area is ${Math.round(currentCapacity)} Plants`);
     }
 }
 
@@ -140,4 +143,4 @@ console.log("-------------------------------------------------------------------
 
 // Part 3: Errors in Judgement.
 console.log('Part 3: Errors in Judgement');
-errorsCatches(100);
+errorsCatches(50);
